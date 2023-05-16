@@ -19,8 +19,8 @@ jobs:
       env:
         cache-name: cache-valgrind-modules
       with:
-        # npm cache files are stored in `~/.npm` on Linux/macOS
-        path: ~/.npm
+        # Update the caching path to a valid location
+        path: ${{ runner.temp }}/npm
         key: valgrind
 
     - if: ${{ steps.cache-valgrind.outputs.cache-hit != 'true' }}
