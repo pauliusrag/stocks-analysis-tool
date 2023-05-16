@@ -13,13 +13,19 @@ jobs:
     - name: Build
       run: make
 
+    - name: Cache Valgrind
+      id: cache-valgrind
+      uses: actions/cache@v2
+      with:
+        path: /usr/lib/valgrind
+        key: valgrind
+
     - name: Install Valgrind
+      if: steps.cache-valgrind.outputs.cache-hit != 'true'
       run: |
-        if ! command -v valgrind &> /dev/null
-        then
-            sudo apt-get update
-            sudo apt-get install valgrind
-        fi
+        sudo apt-get update
+        sudo apt-get install valgrind
+
       
     - name: Build and run with Valgrind
       run: make valgrind
