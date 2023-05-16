@@ -41,7 +41,7 @@ test: $(EXEC)
 	
 # Run Valgrind check
 valgrind: $(EXECUTABLE)
-	valgrind --leak-check=full ./$(EXEC)
+	valgrind --leak-check=full --error-exitcode=1 ./$(EXEC)
 
 # Target: Clean build artifacts
 clean:
