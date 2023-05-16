@@ -41,10 +41,11 @@ test: $(EXEC)
 
 # Run Valgrind check
 valgrind: $(EXEC)
-	valgrind --leak-check=full --error-exitcode=1 ./$(EXEC)
+	PATH="/usr/local/valgrind/bin:$(PATH)" valgrind --leak-check=full --error-exitcode=1 ./$(EXEC)
 
 # Target: Clean build artifacts
 clean:
 	rm -rf $(BUILDDIR) $(EXEC)
 
-.PHONY: clean test
+.PHONY: clean test valgrind
+
