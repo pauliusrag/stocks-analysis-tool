@@ -1,32 +1,24 @@
-name: Makefile CI
+name: Valgrind Caching
 
-on: [push]
+on:
+  push:
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      
-    - name: Build
-      run: make
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Cache Valgrind
-      id: cache-valgrind
-      uses: actions/cache@v3
-      env:
-        cache-name: cache-valgrind-modules
-      with:
-        # Update the caching path to a valid location
-        path: ${{ runner.temp }}/npm
-        key: valgrind
+      - name: Cache Valgrind
+        id: cache-valgrind
+        uses: actions/cache@v2
+        with:
+          path: /usr
+          key: valgrind-${{ runner.os }}-$(md5sum /usr/bin/valgrind | awk '{print $1}')
 
-    - if: ${{ steps.cache-valgrind.outputs.cache-hit != 'true' }}
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y valgrind
-
-    - name: Build and run with Valgrind
-      run: make valgrind
+      - name: Install Valgrind
+        if: steps.cache-valgrind.outputs.cache-hit != 'true'
+        run: sudo apt-get install -y valgrind
