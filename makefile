@@ -38,9 +38,9 @@ $(BUILDDIR):
 # Target: Run unit tests
 test: $(EXEC)
 	$(TESTDIR)/run_tests.sh
-	
+
 # Run Valgrind check
-valgrind: $(EXECUTABLE)
+valgrind: $(EXEC)
 	valgrind --leak-check=full --error-exitcode=1 ./$(EXEC)
 
 # Target: Clean build artifacts
