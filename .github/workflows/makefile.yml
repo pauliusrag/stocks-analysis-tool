@@ -12,3 +12,9 @@ jobs:
       
     - name: Build
       run: make
+      
+    - name: Install Valgrind
+      run: sudo apt-get install valgrind
+      
+    - name: Build and run with Valgrind
+      run: make valgrind
