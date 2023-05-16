@@ -13,25 +13,20 @@ jobs:
     - name: Build
       run: make
 
-    - name: Create Valgrind directory
-      run: |
-        sudo mkdir -p /usr/local/valgrind
-        sudo chown -R $USER:$USER /usr/local/valgrind
-
     - name: Cache Valgrind
       id: cache-valgrind
       uses: actions/cache@v3
+      env:
+        cache-name: cache-valgrind-modules
       with:
-        path: /usr/local/valgrind
+        # npm cache files are stored in `~/.npm` on Linux/macOS
+        path: ~/.npm
         key: valgrind
-  
-    - name: Install Valgrind
-      if: steps.cache-valgrind.outputs.cache-hit != 'true'
+
+    - if: ${{ steps.cache-valgrind.outputs.cache-hit != 'true' }}
       run: |
         sudo apt-get update
         sudo apt-get install -y valgrind
-        sudo cp -r /usr/lib/valgrind/* /usr/local/valgrind
-        export PATH="/usr/local/valgrind/bin:$PATH"
 
     - name: Build and run with Valgrind
       run: make valgrind
