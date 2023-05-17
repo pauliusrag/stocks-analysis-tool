@@ -16,7 +16,7 @@ jobs:
         id: cache-valgrind
         uses: actions/cache@v2
         with:
-          path: /usr
+          path: /usr/bin/valgrind
           key: valgrind-${{ runner.os }}-${{ github.ref }}-$(md5sum /usr/bin/valgrind | awk '{print $1}')
 
       - name: Install Valgrind
