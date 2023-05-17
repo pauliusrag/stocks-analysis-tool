@@ -42,6 +42,10 @@ test: $(EXEC)
 # Run Valgrind check
 valgrind: $(EXEC)
 	PATH="/usr/local/valgrind/bin:$(PATH)" valgrind --leak-check=full --error-exitcode=1 ./$(EXEC)
+	
+# Target: Run Cppcheck on src folder
+cppcheck:
+	cppcheck --enable=all --verbose $(SRCDIR)
 
 # Target: Clean build artifacts
 clean:
