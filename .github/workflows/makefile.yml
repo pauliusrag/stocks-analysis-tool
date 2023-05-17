@@ -1,14 +1,13 @@
-name: Valgrind Caching
+name: Makefile CI
 
-on:
-  push:
-  pull_request:
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+<<<<<<< HEAD
       - name: Checkout repository
         uses: actions/checkout@v2
         
@@ -25,3 +24,16 @@ jobs:
       - name: Install Valgrind
         if: steps.cache-valgrind.outputs.cache-hit != 'true'
         run: sudo apt-get install -y valgrind
+=======
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Build
+      run: make
+      
+    - name: Install Valgrind
+      run: sudo apt-get install valgrind
+      
+    - name: Build and run with Valgrind
+      run: make valgrind
+>>>>>>> edf0f91ff8cf8d439a57ebc8e26c39dc95871116
