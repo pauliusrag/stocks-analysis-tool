@@ -30,6 +30,16 @@
         "isDefault": true
       },
       "problemMatcher": []
+    },
+    {
+      "label": "run",
+      "type": "shell",
+      "command": "make run",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
     }
   ]
 }
