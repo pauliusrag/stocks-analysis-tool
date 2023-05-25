@@ -8,7 +8,7 @@ INCDIR := include
 LIBDIR := libs
 SRCDIR := src
 TESTDIR := test
-GTESTDIR := $(LIBDIR)/googletest
+GTESTDIR := $(LIBDIR)/googletests
 # Output directory
 BUILDDIR := build
 # Executable names
