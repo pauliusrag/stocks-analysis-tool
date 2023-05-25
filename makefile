@@ -12,7 +12,7 @@ GTESTDIR := $(LIBDIR)/googletests
 # Output directory
 BUILDDIR := build
 # Executable names
-EXEC := main
+EXEC := stocks-analysis-tool
 TEST_EXEC := test_runner
 
 # Source files
@@ -27,7 +27,7 @@ INC := -I$(INCDIR)
 TEST_INC := -I$(GTESTDIR)/googletest/include -I$(GTESTDIR)/googlemock/include
 
 # Libraries
-LIBS := -L$(GTESTDIR)/build/lib -lgtest -lgtest_main -lpthread
+TEST_LIBS := -L$(GTESTDIR)/build/lib -lgtest -lgtest_main -lgmock_main -lgmock -lpthread
 
 # Target: Build main executable
 $(EXEC): $(OBJS)
@@ -35,7 +35,7 @@ $(EXEC): $(OBJS)
 
 # Target: Build test executable
 $(TEST_EXEC): $(TEST_OBJS)
-	$(CXX) $(CXXFLAGS) $(TEST_INC) -o $(TEST_EXEC) $(TEST_OBJS) $(LIBS)
+	$(CXX) $(CXXFLAGS) $(TEST_INC) -o $(TEST_EXEC) $(TEST_OBJS) $(TEST_LIBS)
 
 # Rule: Build object files from source files
 $(BUILDDIR)/%.o: $(SRCDIR)/%.cpp | $(BUILDDIR)
@@ -60,10 +60,6 @@ valgrind: $(EXEC)
 # Target: Run Cppcheck on src folder
 cppcheck:
 	cppcheck --enable=all --verbose $(SRCDIR)
-	
-# Target: Run built code
-run:
-	./$(EXEC)
 
 # Target: Clean build artifacts
 clean:
@@ -77,5 +73,3 @@ run: $(EXEC)
 runall: $(EXEC) $(TEST_EXEC)
 	./$(EXEC)
 	./$(TEST_EXEC)
-
-.PHONY: clean test valgrind
