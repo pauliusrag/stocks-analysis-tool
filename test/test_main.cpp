@@ -2,5 +2,5 @@
 
 TEST(MyTestSuite, MyTest)
 {
-    ASSERT_EQ(2 + 3, 4);
+    ASSERT_EQ(2 + 2, 4);
 }
