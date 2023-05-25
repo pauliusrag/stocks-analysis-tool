@@ -51,7 +51,7 @@ $(BUILDDIR):
 
 # Target: Run tests
 test: $(TEST_EXEC)
-	./$(TEST_EXEC)
+	./$(TEST_EXEC) || exit 1
 
 # Target: Run Valgrind check
 valgrind: $(EXEC)
