@@ -60,6 +60,10 @@ valgrind: $(EXEC)
 # Target: Run Cppcheck on src folder
 cppcheck:
 	cppcheck --enable=all --verbose $(SRCDIR)
+	
+# Target: Run built code
+run:
+	./$(EXEC)
 
 # Target: Clean build artifacts
 clean:
