@@ -9,9 +9,9 @@ void test_curl(void) {
 
     curl = curl_easy_init();
     if(curl) {
-        curl_easy_setopt(curl, CURLOPT_URL, "http://example.com");
+        curl_easy_setopt(curl, CURLOPT_URL, "http://google.com");
         res = curl_easy_perform(curl);
-
+        // printf("vaziuojam\r");
         /* always cleanup */
         curl_easy_cleanup(curl);
     }
