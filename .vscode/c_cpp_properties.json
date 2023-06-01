@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "libs/googletest/googletest/include",
-                "libs/googletest/googlemock/include"
+                "libs/googletest/googlemock/include",
+                "libs/curl/include/curl"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
