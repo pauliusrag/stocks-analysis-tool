@@ -40,6 +40,3 @@ To run main project and unit tests run:
 ```
 make runall
 ```
-
-Requirements to build curl library
-sudo apt-get install libssl-dev

@@ -31,8 +31,6 @@ TEST_LIBS := -L$(GTESTDIR)/build/lib -lgtest -lgtest_main -lgmock_main -lgmock -
 
 # Curl library
 CURL_LIBDIR := libs/curl
-#CURL_INCDIR := $(CURL_LIBDIR)/include
-#CURL_LIB := $(CURL_LIBDIR)/libcurl.so
 CURL_LDFLAGS := -L$(CURL_LIBDIR)
 CURL_LDLIBS := -lcurl
 
