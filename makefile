@@ -9,6 +9,7 @@ LIBDIR := libs
 SRCDIR := src
 TESTDIR := test
 GTESTDIR := $(LIBDIR)/googletests
+CURL_INC_DIR := $(LIBDIR)/curl/include/curl
 # Output directory
 BUILDDIR := build
 # Executable names
@@ -23,9 +24,8 @@ OBJS := $(patsubst $(SRCDIR)/%.cpp,$(BUILDDIR)/%.o,$(SRCS))
 TEST_OBJS := $(patsubst $(TESTDIR)/%.cpp,$(BUILDDIR)/%.o,$(TEST_SRCS))
 
 # Include directories
-INC := -I$(INCDIR)
+INC := -I$(INCDIR) -I$(CURL_INC_DIR)
 TEST_INC := -I$(GTESTDIR)/googletest/include -I$(GTESTDIR)/googlemock/include
-CURL_INC := -I$(LIBDIR)/libs/curl/include/curl
 
 # Libraries
 TEST_LIBS := -L$(GTESTDIR)/build/lib -lgtest -lgtest_main -lgmock_main -lgmock -lpthread
