@@ -1,0 +1,704 @@
+Performing Curl Test HAVE_FSETXATTR_6 failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_56fe7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_56fe7.dir/build.make CMakeFiles/cmTC_56fe7.dir/build
+gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_56fe7.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_FSETXATTR_6  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_56fe7.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:422:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  422 | main() {
+      | ^~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:423:3: error: too many arguments to function ‘fsetxattr’
+  423 |   fsetxattr(0, 0, 0, 0, 0, 0);
+      |   ^~~~~~~~~
+In file included from /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:420:
+/usr/include/x86_64-linux-gnu/sys/xattr.h:54:12: note: declared here
+   54 | extern int fsetxattr (int __fd, const char *__name, const void *__value,
+      |            ^~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_56fe7.dir/build.make:78: CMakeFiles/cmTC_56fe7.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_56fe7/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_38f89/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_38f89.dir/build.make CMakeFiles/cmTC_38f89.dir/build
+gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_38f89.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_IOCTLSOCKET  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_38f89.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:216:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  216 | main ()
+      | ^~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:221:24: warning: implicit declaration of function ‘ioctlsocket’ [-Wimplicit-function-declaration]
+  221 |  unsigned long flags = ioctlsocket(socket, FIONBIO, &flags);
+      |                        ^~~~~~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:221:24: warning: nested extern declaration of ‘ioctlsocket’ [-Wnested-externs]
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:221:44: error: ‘FIONBIO’ undeclared (first use in this function)
+  221 |  unsigned long flags = ioctlsocket(socket, FIONBIO, &flags);
+      |                                            ^~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:221:44: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_38f89.dir/build.make:78: CMakeFiles/cmTC_38f89.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_38f89/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6f922/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6f922.dir/build.make CMakeFiles/cmTC_6f922.dir/build
+gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6f922.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_IOCTLSOCKET_CAMEL  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_6f922.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:241:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  241 | main ()
+      | ^~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:245:13: warning: implicit declaration of function ‘IoctlSocket’ [-Wimplicit-function-declaration]
+  245 |     if(0 != IoctlSocket(0, 0, 0))
+      |             ^~~~~~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:245:13: warning: nested extern declaration of ‘IoctlSocket’ [-Wnested-externs]
+Linking C executable cmTC_6f922
+/snap/cmake/1299/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f922.dir/link.txt --verbose=1
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_IOCTLSOCKET_CAMEL  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H CMakeFiles/cmTC_6f922.dir/CurlTests.c.o -o cmTC_6f922  /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+/usr/bin/ld: CMakeFiles/cmTC_6f922.dir/CurlTests.c.o: in function `main':
+CurlTests.c:(.text+0x1d): undefined reference to `IoctlSocket'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_6f922.dir/build.make:101: cmTC_6f922] Error 1
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_6f922/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL_FIONBIO failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_19c06/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_19c06.dir/build.make CMakeFiles/cmTC_19c06.dir/build
+gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_19c06.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_IOCTLSOCKET_CAMEL_FIONBIO  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_19c06.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:264:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  264 | main ()
+      | ^~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:269:17: warning: implicit declaration of function ‘IoctlSocket’ [-Wimplicit-function-declaration]
+  269 |         if(0 != IoctlSocket(0, FIONBIO, &flags))
+      |                 ^~~~~~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:269:17: warning: nested extern declaration of ‘IoctlSocket’ [-Wnested-externs]
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:269:32: error: ‘FIONBIO’ undeclared (first use in this function)
+  269 |         if(0 != IoctlSocket(0, FIONBIO, &flags))
+      |                                ^~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:269:32: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_19c06.dir/build.make:78: CMakeFiles/cmTC_19c06.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_19c06/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_FIONBIO failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d0ce5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d0ce5.dir/build.make CMakeFiles/cmTC_d0ce5.dir/build
+gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d0ce5.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_IOCTLSOCKET_FIONBIO  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_d0ce5.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:288:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  288 | main ()
+      | ^~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:292:17: warning: implicit declaration of function ‘ioctlsocket’ [-Wimplicit-function-declaration]
+  292 |         if(0 != ioctlsocket(0, FIONBIO, &flags))
+      |                 ^~~~~~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:292:17: warning: nested extern declaration of ‘ioctlsocket’ [-Wnested-externs]
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:292:32: error: ‘FIONBIO’ undeclared (first use in this function)
+  292 |         if(0 != ioctlsocket(0, FIONBIO, &flags))
+      |                                ^~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:292:32: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_d0ce5.dir/build.make:78: CMakeFiles/cmTC_d0ce5.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_d0ce5/fast] Error 2
+
+
+Performing Curl Test HAVE_SETSOCKOPT_SO_NONBLOCK failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a689a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a689a.dir/build.make CMakeFiles/cmTC_a689a.dir/build
+gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a689a.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_SETSOCKOPT_SO_NONBLOCK  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_a689a.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:382:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  382 | main ()
+      | ^~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:384:43: error: ‘SO_NONBLOCK’ undeclared (first use in this function); did you mean ‘SOCK_NONBLOCK’?
+  384 |         if(0 != setsockopt(0, SOL_SOCKET, SO_NONBLOCK, 0, 0))
+      |                                           ^~~~~~~~~~~
+      |                                           SOCK_NONBLOCK
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:384:43: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_a689a.dir/build.make:78: CMakeFiles/cmTC_a689a.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_a689a/fast] Error 2
+
+
+Performing Curl Test HAVE_O_NONBLOCK failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a57c5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a57c5.dir/build.make CMakeFiles/cmTC_a57c5.dir/build
+gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a57c5.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_O_NONBLOCK  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_a57c5.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:533: warning: ISO C forbids an empty translation unit [-Wpedantic]
+Linking C executable cmTC_a57c5
+/snap/cmake/1299/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a57c5.dir/link.txt --verbose=1
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_O_NONBLOCK  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H CMakeFiles/cmTC_a57c5.dir/CurlTests.c.o -o cmTC_a57c5  /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_a57c5.dir/build.make:101: cmTC_a57c5] Error 1
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_a57c5/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_3 failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c7d50/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c7d50.dir/build.make CMakeFiles/cmTC_c7d50.dir/build
+gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c7d50.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_GETHOSTBYNAME_R_3  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_c7d50.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:92:19: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   92 |   char *address = "example.com";
+      |                   ^~~~~~~~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:99:23: error: storage size of ‘hdata’ isn’t known
+   99 |   struct hostent_data hdata;
+      |                       ^~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:111:8: error: too few arguments to function ‘gethostbyname_r’
+  111 |   rc = gethostbyname_r(address, &h, &hdata);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:89:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:99:23: warning: unused variable ‘hdata’ [-Wunused-variable]
+   99 |   struct hostent_data hdata;
+      |                       ^~~~~
+gmake[1]: *** [CMakeFiles/cmTC_c7d50.dir/build.make:78: CMakeFiles/cmTC_c7d50.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_c7d50/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_5 failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_69796/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_69796.dir/build.make CMakeFiles/cmTC_69796.dir/build
+gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_69796.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_GETHOSTBYNAME_R_5  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_69796.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:92:19: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   92 |   char *address = "example.com";
+      |                   ^~~~~~~~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:114:51: warning: passing argument 5 of ‘gethostbyname_r’ from incompatible pointer type [-Wincompatible-pointer-types]
+  114 |   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+      |                                                   ^~~~~~~~~
+      |                                                   |
+      |                                                   int *
+In file included from /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:89:
+/usr/include/netdb.h:180:57: note: expected ‘struct hostent ** restrict’ but argument is of type ‘int *’
+  180 |                             struct hostent **__restrict __result,
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:114:8: error: too few arguments to function ‘gethostbyname_r’
+  114 |   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:89:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_69796.dir/build.make:78: CMakeFiles/cmTC_69796.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_69796/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_3_REENTRANT failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7455b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7455b.dir/build.make CMakeFiles/cmTC_7455b.dir/build
+gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7455b.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_GETHOSTBYNAME_R_3_REENTRANT  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_7455b.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:92:19: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   92 |   char *address = "example.com";
+      |                   ^~~~~~~~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:99:23: error: storage size of ‘hdata’ isn’t known
+   99 |   struct hostent_data hdata;
+      |                       ^~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:111:8: error: too few arguments to function ‘gethostbyname_r’
+  111 |   rc = gethostbyname_r(address, &h, &hdata);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:89:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:99:23: warning: unused variable ‘hdata’ [-Wunused-variable]
+   99 |   struct hostent_data hdata;
+      |                       ^~~~~
+gmake[1]: *** [CMakeFiles/cmTC_7455b.dir/build.make:78: CMakeFiles/cmTC_7455b.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_7455b/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_5_REENTRANT failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0573a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0573a.dir/build.make CMakeFiles/cmTC_0573a.dir/build
+gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0573a.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_GETHOSTBYNAME_R_5_REENTRANT  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_0573a.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:92:19: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   92 |   char *address = "example.com";
+      |                   ^~~~~~~~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:114:51: warning: passing argument 5 of ‘gethostbyname_r’ from incompatible pointer type [-Wincompatible-pointer-types]
+  114 |   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+      |                                                   ^~~~~~~~~
+      |                                                   |
+      |                                                   int *
+In file included from /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:89:
+/usr/include/netdb.h:180:57: note: expected ‘struct hostent ** restrict’ but argument is of type ‘int *’
+  180 |                             struct hostent **__restrict __result,
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:114:8: error: too few arguments to function ‘gethostbyname_r’
+  114 |   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:89:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_0573a.dir/build.make:78: CMakeFiles/cmTC_0573a.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_0573a/fast] Error 2
+
+
+Performing Curl Test HAVE_GLIBC_STRERROR_R failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_03f38/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_03f38.dir/build.make CMakeFiles/cmTC_03f38.dir/build
+gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_03f38.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_GLIBC_STRERROR_R  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_03f38.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:394:6: warning: no previous prototype for ‘check’ [-Wmissing-prototypes]
+  394 | void check(char c) {}
+      |      ^~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: In function ‘check’:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:394:17: warning: unused parameter ‘c’ [-Wunused-parameter]
+  394 | void check(char c) {}
+      |            ~~~~~^
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: At top level:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:397:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  397 | main () {
+      | ^~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:400:51: error: subscripted value is neither array nor pointer nor vector
+  400 |   check(strerror_r(EACCES, buffer, sizeof(buffer))[0]);
+      |                                                   ^
+gmake[1]: *** [CMakeFiles/cmTC_03f38.dir/build.make:78: CMakeFiles/cmTC_03f38.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_03f38/fast] Error 2
+
+
+Performing Curl Test HAVE_BUILTIN_AVAILABLE failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4e8e3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4e8e3.dir/build.make CMakeFiles/cmTC_4e8e3.dir/build
+gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4e8e3.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_BUILTIN_AVAILABLE  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_4e8e3.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:446:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  446 | main() {
+      | ^~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:447:6: warning: implicit declaration of function ‘__builtin_available’; did you mean ‘__builtin_scalbl’? [-Wimplicit-function-declaration]
+  447 |   if(__builtin_available(macOS 10.12, *)) {}
+      |      ^~~~~~~~~~~~~~~~~~~
+      |      __builtin_scalbl
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:447:6: warning: nested extern declaration of ‘__builtin_available’ [-Wnested-externs]
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:447:26: error: ‘macOS’ undeclared (first use in this function)
+  447 |   if(__builtin_available(macOS 10.12, *)) {}
+      |                          ^~~~~
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:447:26: note: each undeclared identifier is reported only once for each function it appears in
+/home/pauliusrag/Desktop/git/curl/CMake/CurlTests.c:447:31: error: expected ‘)’ before numeric constant
+  447 |   if(__builtin_available(macOS 10.12, *)) {}
+      |                         ~     ^~~~~~
+      |                               )
+gmake[1]: *** [CMakeFiles/cmTC_4e8e3.dir/build.make:78: CMakeFiles/cmTC_4e8e3.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/curl/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_4e8e3/fast] Error 2
+
+
+Performing Curl Test HAVE_FSETXATTR_6 failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_234a0/fast && gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_234a0.dir/build.make CMakeFiles/cmTC_234a0.dir/build
+gmake[2]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_234a0.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_FSETXATTR_6  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_234a0.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:422:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  422 | main() {
+      | ^~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:423:3: error: too many arguments to function ‘fsetxattr’
+  423 |   fsetxattr(0, 0, 0, 0, 0, 0);
+      |   ^~~~~~~~~
+In file included from /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:420:
+/usr/include/x86_64-linux-gnu/sys/xattr.h:54:12: note: declared here
+   54 | extern int fsetxattr (int __fd, const char *__name, const void *__value,
+      |            ^~~~~~~~~
+gmake[2]: *** [CMakeFiles/cmTC_234a0.dir/build.make:78: CMakeFiles/cmTC_234a0.dir/CurlTests.c.o] Error 1
+gmake[2]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_234a0/fast] Error 2
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_IOCTLSOCKET failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0a1f4/fast && gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_0a1f4.dir/build.make CMakeFiles/cmTC_0a1f4.dir/build
+gmake[2]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0a1f4.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_IOCTLSOCKET  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_0a1f4.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:216:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  216 | main ()
+      | ^~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:221:24: warning: implicit declaration of function ‘ioctlsocket’ [-Wimplicit-function-declaration]
+  221 |  unsigned long flags = ioctlsocket(socket, FIONBIO, &flags);
+      |                        ^~~~~~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:221:24: warning: nested extern declaration of ‘ioctlsocket’ [-Wnested-externs]
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:221:44: error: ‘FIONBIO’ undeclared (first use in this function)
+  221 |  unsigned long flags = ioctlsocket(socket, FIONBIO, &flags);
+      |                                            ^~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:221:44: note: each undeclared identifier is reported only once for each function it appears in
+gmake[2]: *** [CMakeFiles/cmTC_0a1f4.dir/build.make:78: CMakeFiles/cmTC_0a1f4.dir/CurlTests.c.o] Error 1
+gmake[2]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_0a1f4/fast] Error 2
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1f713/fast && gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_1f713.dir/build.make CMakeFiles/cmTC_1f713.dir/build
+gmake[2]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1f713.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_IOCTLSOCKET_CAMEL  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_1f713.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:241:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  241 | main ()
+      | ^~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:245:13: warning: implicit declaration of function ‘IoctlSocket’ [-Wimplicit-function-declaration]
+  245 |     if(0 != IoctlSocket(0, 0, 0))
+      |             ^~~~~~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:245:13: warning: nested extern declaration of ‘IoctlSocket’ [-Wnested-externs]
+Linking C executable cmTC_1f713
+/snap/cmake/1299/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f713.dir/link.txt --verbose=1
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_IOCTLSOCKET_CAMEL  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H CMakeFiles/cmTC_1f713.dir/CurlTests.c.o -o cmTC_1f713  /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+/usr/bin/ld: CMakeFiles/cmTC_1f713.dir/CurlTests.c.o: in function `main':
+CurlTests.c:(.text+0x1d): undefined reference to `IoctlSocket'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/cmTC_1f713.dir/build.make:101: cmTC_1f713] Error 1
+gmake[2]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_1f713/fast] Error 2
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL_FIONBIO failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4f3b6/fast && gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_4f3b6.dir/build.make CMakeFiles/cmTC_4f3b6.dir/build
+gmake[2]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4f3b6.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_IOCTLSOCKET_CAMEL_FIONBIO  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_4f3b6.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:264:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  264 | main ()
+      | ^~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:269:17: warning: implicit declaration of function ‘IoctlSocket’ [-Wimplicit-function-declaration]
+  269 |         if(0 != IoctlSocket(0, FIONBIO, &flags))
+      |                 ^~~~~~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:269:17: warning: nested extern declaration of ‘IoctlSocket’ [-Wnested-externs]
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:269:32: error: ‘FIONBIO’ undeclared (first use in this function)
+  269 |         if(0 != IoctlSocket(0, FIONBIO, &flags))
+      |                                ^~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:269:32: note: each undeclared identifier is reported only once for each function it appears in
+gmake[2]: *** [CMakeFiles/cmTC_4f3b6.dir/build.make:78: CMakeFiles/cmTC_4f3b6.dir/CurlTests.c.o] Error 1
+gmake[2]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_4f3b6/fast] Error 2
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_FIONBIO failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_cd4cf/fast && gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_cd4cf.dir/build.make CMakeFiles/cmTC_cd4cf.dir/build
+gmake[2]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cd4cf.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_IOCTLSOCKET_FIONBIO  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_cd4cf.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:288:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  288 | main ()
+      | ^~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:292:17: warning: implicit declaration of function ‘ioctlsocket’ [-Wimplicit-function-declaration]
+  292 |         if(0 != ioctlsocket(0, FIONBIO, &flags))
+      |                 ^~~~~~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:292:17: warning: nested extern declaration of ‘ioctlsocket’ [-Wnested-externs]
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:292:32: error: ‘FIONBIO’ undeclared (first use in this function)
+  292 |         if(0 != ioctlsocket(0, FIONBIO, &flags))
+      |                                ^~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:292:32: note: each undeclared identifier is reported only once for each function it appears in
+gmake[2]: *** [CMakeFiles/cmTC_cd4cf.dir/build.make:78: CMakeFiles/cmTC_cd4cf.dir/CurlTests.c.o] Error 1
+gmake[2]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_cd4cf/fast] Error 2
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_SETSOCKOPT_SO_NONBLOCK failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_611cd/fast && gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_611cd.dir/build.make CMakeFiles/cmTC_611cd.dir/build
+gmake[2]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_611cd.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_SETSOCKOPT_SO_NONBLOCK  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_611cd.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:382:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  382 | main ()
+      | ^~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:384:43: error: ‘SO_NONBLOCK’ undeclared (first use in this function); did you mean ‘SOCK_NONBLOCK’?
+  384 |         if(0 != setsockopt(0, SOL_SOCKET, SO_NONBLOCK, 0, 0))
+      |                                           ^~~~~~~~~~~
+      |                                           SOCK_NONBLOCK
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:384:43: note: each undeclared identifier is reported only once for each function it appears in
+gmake[2]: *** [CMakeFiles/cmTC_611cd.dir/build.make:78: CMakeFiles/cmTC_611cd.dir/CurlTests.c.o] Error 1
+gmake[2]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_611cd/fast] Error 2
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_O_NONBLOCK failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_46bfc/fast && gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_46bfc.dir/build.make CMakeFiles/cmTC_46bfc.dir/build
+gmake[2]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_46bfc.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_O_NONBLOCK  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_46bfc.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:533: warning: ISO C forbids an empty translation unit [-Wpedantic]
+Linking C executable cmTC_46bfc
+/snap/cmake/1299/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46bfc.dir/link.txt --verbose=1
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_O_NONBLOCK  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H CMakeFiles/cmTC_46bfc.dir/CurlTests.c.o -o cmTC_46bfc  /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/cmTC_46bfc.dir/build.make:101: cmTC_46bfc] Error 1
+gmake[2]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_46bfc/fast] Error 2
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_3 failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e5a61/fast && gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_e5a61.dir/build.make CMakeFiles/cmTC_e5a61.dir/build
+gmake[2]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e5a61.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_GETHOSTBYNAME_R_3  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_e5a61.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:92:19: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   92 |   char *address = "example.com";
+      |                   ^~~~~~~~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:99:23: error: storage size of ‘hdata’ isn’t known
+   99 |   struct hostent_data hdata;
+      |                       ^~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:111:8: error: too few arguments to function ‘gethostbyname_r’
+  111 |   rc = gethostbyname_r(address, &h, &hdata);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:89:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:99:23: warning: unused variable ‘hdata’ [-Wunused-variable]
+   99 |   struct hostent_data hdata;
+      |                       ^~~~~
+gmake[2]: *** [CMakeFiles/cmTC_e5a61.dir/build.make:78: CMakeFiles/cmTC_e5a61.dir/CurlTests.c.o] Error 1
+gmake[2]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_e5a61/fast] Error 2
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_5 failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_660a9/fast && gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_660a9.dir/build.make CMakeFiles/cmTC_660a9.dir/build
+gmake[2]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_660a9.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_GETHOSTBYNAME_R_5  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_660a9.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:92:19: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   92 |   char *address = "example.com";
+      |                   ^~~~~~~~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:114:51: warning: passing argument 5 of ‘gethostbyname_r’ from incompatible pointer type [-Wincompatible-pointer-types]
+  114 |   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+      |                                                   ^~~~~~~~~
+      |                                                   |
+      |                                                   int *
+In file included from /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:89:
+/usr/include/netdb.h:180:57: note: expected ‘struct hostent ** restrict’ but argument is of type ‘int *’
+  180 |                             struct hostent **__restrict __result,
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:114:8: error: too few arguments to function ‘gethostbyname_r’
+  114 |   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:89:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/cmTC_660a9.dir/build.make:78: CMakeFiles/cmTC_660a9.dir/CurlTests.c.o] Error 1
+gmake[2]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_660a9/fast] Error 2
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_3_REENTRANT failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_92f1d/fast && gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_92f1d.dir/build.make CMakeFiles/cmTC_92f1d.dir/build
+gmake[2]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_92f1d.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_GETHOSTBYNAME_R_3_REENTRANT  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_92f1d.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:92:19: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   92 |   char *address = "example.com";
+      |                   ^~~~~~~~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:99:23: error: storage size of ‘hdata’ isn’t known
+   99 |   struct hostent_data hdata;
+      |                       ^~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:111:8: error: too few arguments to function ‘gethostbyname_r’
+  111 |   rc = gethostbyname_r(address, &h, &hdata);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:89:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:99:23: warning: unused variable ‘hdata’ [-Wunused-variable]
+   99 |   struct hostent_data hdata;
+      |                       ^~~~~
+gmake[2]: *** [CMakeFiles/cmTC_92f1d.dir/build.make:78: CMakeFiles/cmTC_92f1d.dir/CurlTests.c.o] Error 1
+gmake[2]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_92f1d/fast] Error 2
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_5_REENTRANT failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5cea1/fast && gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_5cea1.dir/build.make CMakeFiles/cmTC_5cea1.dir/build
+gmake[2]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5cea1.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_GETHOSTBYNAME_R_5_REENTRANT  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_5cea1.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:92:19: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   92 |   char *address = "example.com";
+      |                   ^~~~~~~~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:114:51: warning: passing argument 5 of ‘gethostbyname_r’ from incompatible pointer type [-Wincompatible-pointer-types]
+  114 |   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+      |                                                   ^~~~~~~~~
+      |                                                   |
+      |                                                   int *
+In file included from /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:89:
+/usr/include/netdb.h:180:57: note: expected ‘struct hostent ** restrict’ but argument is of type ‘int *’
+  180 |                             struct hostent **__restrict __result,
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:114:8: error: too few arguments to function ‘gethostbyname_r’
+  114 |   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:89:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/cmTC_5cea1.dir/build.make:78: CMakeFiles/cmTC_5cea1.dir/CurlTests.c.o] Error 1
+gmake[2]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_5cea1/fast] Error 2
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_GLIBC_STRERROR_R failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4a9a7/fast && gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_4a9a7.dir/build.make CMakeFiles/cmTC_4a9a7.dir/build
+gmake[2]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4a9a7.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_GLIBC_STRERROR_R  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_4a9a7.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:394:6: warning: no previous prototype for ‘check’ [-Wmissing-prototypes]
+  394 | void check(char c) {}
+      |      ^~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: In function ‘check’:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:394:17: warning: unused parameter ‘c’ [-Wunused-parameter]
+  394 | void check(char c) {}
+      |            ~~~~~^
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: At top level:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:397:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  397 | main () {
+      | ^~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:400:51: error: subscripted value is neither array nor pointer nor vector
+  400 |   check(strerror_r(EACCES, buffer, sizeof(buffer))[0]);
+      |                                                   ^
+gmake[2]: *** [CMakeFiles/cmTC_4a9a7.dir/build.make:78: CMakeFiles/cmTC_4a9a7.dir/CurlTests.c.o] Error 1
+gmake[2]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_4a9a7/fast] Error 2
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+
+
+Performing Curl Test HAVE_BUILTIN_AVAILABLE failed with the following output:
+Change Dir: /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/snap/cmake/1299/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9615d/fast && gmake[1]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_9615d.dir/build.make CMakeFiles/cmTC_9615d.dir/build
+gmake[2]: Entering directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9615d.dir/CurlTests.c.o
+/usr/bin/cc   -W -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Wcast-align -Wdeclaration-after-statement -Wempty-body -Wendif-labels -Wfloat-equal -Wignored-qualifiers -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wstrict-prototypes -Wtype-limits -Wvla -Wmissing-parameter-type -Wold-style-declaration -Wstrict-aliasing=3 -Wformat=2 -Warray-bounds=2 -ftree-vrp -Wduplicated-cond -Wnull-dereference -fdelete-null-pointer-checks -Wshift-negative-value -Wshift-overflow=2 -Walloc-zero -Wduplicated-branches -Wformat-overflow=2 -Wformat-truncation=1 -Wrestrict -Warith-conversion -Wdouble-promotion -Wenum-conversion -Wunused-const-variable -DHAVE_BUILTIN_AVAILABLE  -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_SYS_UTSNAME_H -o CMakeFiles/cmTC_9615d.dir/CurlTests.c.o -c /home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:446:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  446 | main() {
+      | ^~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c: In function ‘main’:
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:447:6: warning: implicit declaration of function ‘__builtin_available’; did you mean ‘__builtin_scalbl’? [-Wimplicit-function-declaration]
+  447 |   if(__builtin_available(macOS 10.12, *)) {}
+      |      ^~~~~~~~~~~~~~~~~~~
+      |      __builtin_scalbl
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:447:6: warning: nested extern declaration of ‘__builtin_available’ [-Wnested-externs]
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:447:26: error: ‘macOS’ undeclared (first use in this function)
+  447 |   if(__builtin_available(macOS 10.12, *)) {}
+      |                          ^~~~~
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:447:26: note: each undeclared identifier is reported only once for each function it appears in
+/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMake/CurlTests.c:447:31: error: expected ‘)’ before numeric constant
+  447 |   if(__builtin_available(macOS 10.12, *)) {}
+      |                         ~     ^~~~~~
+      |                               )
+gmake[2]: *** [CMakeFiles/cmTC_9615d.dir/build.make:78: CMakeFiles/cmTC_9615d.dir/CurlTests.c.o] Error 1
+gmake[2]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_9615d/fast] Error 2
+gmake[1]: Leaving directory '/home/pauliusrag/Desktop/git/stocks-analysis-tool/libs/curl/CMakeFiles/CMakeTmp'
+
+

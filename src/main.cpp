@@ -1,6 +1,21 @@
 #include <iostream>
+#include <curl/curl.h>
 
 using namespace std;
+
+void test_curl(void) {
+    CURL *curl;
+    CURLcode res;
+
+    curl = curl_easy_init();
+    if(curl) {
+        curl_easy_setopt(curl, CURLOPT_URL, "http://example.com");
+        res = curl_easy_perform(curl);
+
+        /* always cleanup */
+        curl_easy_cleanup(curl);
+    }
+}
 
 int main()
 {
@@ -8,7 +23,7 @@ int main()
     int test = 5;
     float kan = 2.5;
     test = kan;
-
+    test_curl();
     return 0;
 }
 

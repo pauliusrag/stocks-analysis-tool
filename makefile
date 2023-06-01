@@ -23,15 +23,22 @@ OBJS := $(patsubst $(SRCDIR)/%.cpp,$(BUILDDIR)/%.o,$(SRCS))
 TEST_OBJS := $(patsubst $(TESTDIR)/%.cpp,$(BUILDDIR)/%.o,$(TEST_SRCS))
 
 # Include directories
-INC := -I$(INCDIR) 
+INC := -I$(INCDIR)
 TEST_INC := -I$(GTESTDIR)/googletest/include -I$(GTESTDIR)/googlemock/include
 
 # Libraries
 TEST_LIBS := -L$(GTESTDIR)/build/lib -lgtest -lgtest_main -lgmock_main -lgmock -lpthread
 
+# Curl library
+CURL_LIBDIR := libs/curl
+CURL_INCDIR := $(CURL_LIBDIR)/include
+CURL_LIB := $(CURL_LIBDIR)/libcurl.so
+CURL_LDFLAGS := -L$(CURL_LIBDIR)
+CURL_LDLIBS := -lcurl
+
 # Target: Build main executable
-$(EXEC): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(INC) -o $(EXEC) $(OBJS)
+$(EXEC): $(OBJS) $(CURL_LIB)
+	$(CXX) $(CXXFLAGS) $(INC) $(CURL_LDFLAGS) -o $(EXEC) $(OBJS) $(CURL_LDLIBS)
 
 # Target: Build test executable
 $(TEST_EXEC): $(TEST_OBJS)
@@ -49,6 +56,11 @@ $(BUILDDIR)/%.o: $(TESTDIR)/%.cpp | $(BUILDDIR)
 $(BUILDDIR):
 	mkdir -p $(BUILDDIR)
 
+# Rule: Build the Curl library
+$(CURL_LIB):
+	cd $(CURL_LIBDIR) && cmake .
+	$(MAKE) -C $(CURL_LIBDIR)
+
 # Target: Run tests
 test: $(TEST_EXEC)
 	./$(TEST_EXEC) || exit 1
@@ -63,7 +75,7 @@ cppcheck:
 
 # Target: Clean build artifacts
 clean:
-	rm -rf $(BUILDDIR) $(EXEC) $(TEST_EXEC)
+	rm -rf $(BUILDDIR) $(EXEC) $(TEST_EXEC) $(CURL_LIB)
 
 # Target: Run the main executable
 run: $(EXEC)
