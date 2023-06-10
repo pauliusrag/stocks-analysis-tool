@@ -1,4 +1,6 @@
-#pragma once
+#ifndef DATA_FETCHING_H_
+#define DATA_FETCHING_H_
+
 #include <pch.h>
 
 enum class DataRange {
@@ -36,8 +38,10 @@ private:
     std::map<DataInterval, RequestData> buildIntervalTable();
     std::map<DataRange, RequestData> buildRangeTable();
     std::string createHTTPSLink(std::string ticker, const std::string range, const std::string interval);
-    std::string sendYahooRequest(const std::string link);
+    const std::string sendYahooRequest(const std::string link);
 
 public:
-    DataFetching(std::string ticker, DataRange range, DataInterval interval);
+    DataFetching(const std::string ticker, const DataRange range, const DataInterval interval);
 };
+
+#endif // DATA_FETCHING_H_

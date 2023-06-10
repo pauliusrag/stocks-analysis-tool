@@ -45,23 +45,21 @@ std::string DataFetching::createHTTPSLink(std::string ticker, const std::string 
     return link;
 }
 
-static size_t writeCallback(void* contents, size_t size, size_t nmemb, std::string* data) {
-    size_t totalSize = size * nmemb;
+static size_t writeCallback(void* contents, const size_t size, const size_t nmemb, std::string* data) {
+    const size_t totalSize = size * nmemb;
     data->append(static_cast<char*>(contents), totalSize);
     return totalSize;
 }
 
-std::string DataFetching::sendYahooRequest(const std::string link) {
-    CURL* curl;
-    CURLcode res;
+const std::string DataFetching::sendYahooRequest(const std::string link) {
     std::string data;
-    curl = curl_easy_init();
+    CURL *curl = curl_easy_init();
     if (curl) {
         std::cout<<link<<std::endl;
         curl_easy_setopt(curl, CURLOPT_URL, link.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writeCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &data);
-        res = curl_easy_perform(curl);
+        CURLcode res = curl_easy_perform(curl);
         if (res != CURLE_OK) {
             std::cerr << "Failed to fetch URL: " << curl_easy_strerror(res) << std::endl;
         }
@@ -72,15 +70,14 @@ std::string DataFetching::sendYahooRequest(const std::string link) {
     return data;
 }
 
-DataFetching::DataFetching(std::string ticker, DataRange range, DataInterval interval) {
-    std::cout << "Constructor called!" << std::endl;
+DataFetching::DataFetching(const std::string ticker, const DataRange range, const DataInterval interval) {
     std::map<DataInterval, RequestData> interval_table = buildIntervalTable();
     std::map<DataRange, RequestData> range_table = buildRangeTable();
-    const std::string interval_str = interval_table[interval].stringValue;
-    const std::string range_str = range_table[range].stringValue;
-    const std::string link = createHTTPSLink(ticker, range_str, interval_str);
+    const std::string link = createHTTPSLink(ticker,
+                                             range_table[range].stringValue,
+                                             interval_table[interval].stringValue);
     const std::string parsed_string = sendYahooRequest(link);
+    // need to check if parsed string is ok
     DataParser parser(range_table[range].minutes, interval_table[interval].minutes, parsed_string);
-    // std::vector<ParsedData> parsedDataVector = parser.parseData(parsed_string);
-
+    const ParsedData parsed_data = parser.getParsedData();
 }
