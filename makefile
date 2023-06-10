@@ -65,7 +65,7 @@ valgrind: $(EXEC)
 
 # Target: Run Cppcheck on src folder
 cppcheck:
-	cppcheck --enable=all --verbose $(SRCDIR)
+	cppcheck --enable=all --verbose ./$(SRCDIR)/
 
 # Target: Clean build artifacts
 clean:
