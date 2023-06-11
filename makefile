@@ -1,7 +1,7 @@
 # Compiler
 CXX := g++
 # Compiler flags
-CXXFLAGS := -std=c++20 -Wall -Wextra
+CXXFLAGS := -std=c++20 -Wall -Wextra -g
 
 # Directories
 INCDIR := include
@@ -18,14 +18,15 @@ TEST_EXEC := test_runner
 
 # Source files
 SRCS := $(wildcard $(SRCDIR)/*.cpp)
-TEST_SRCS := $(wildcard $(TESTDIR)/*.cpp)
+# TEST_SRCS := $(wildcard $(TESTDIR)/*.cpp) src/data_analysis.cpp
+TEST_SRCS := $(filter-out $(SRCDIR)/main.cpp,$(SRCS)) $(wildcard $(TESTDIR)/*.cpp)
 # Object files
 OBJS := $(patsubst $(SRCDIR)/%.cpp,$(BUILDDIR)/%.o,$(SRCS))
 TEST_OBJS := $(patsubst $(TESTDIR)/%.cpp,$(BUILDDIR)/%.o,$(TEST_SRCS))
 
 # Include directories
 INC := -I$(INCDIR) -I$(CURL_INC_DIR)
-TEST_INC := -I$(GTESTDIR)/googletest/include -I$(GTESTDIR)/googlemock/include
+TEST_INC := -I$(GTESTDIR)/googletest/include -I$(GTESTDIR)/googlemock/include -I$(INCDIR)
 
 # Libraries
 TEST_LIBS := -L$(GTESTDIR)/build/lib -lgtest -lgtest_main -lgmock_main -lgmock -lpthread
