@@ -4,12 +4,12 @@
 #include <pch.h>
 
 enum class DataName {
-    TIMESTAMP,
-    CLOSE_PRICE,
-    OPEN_PRICE,
-    VOLUME,
-    LOWEST_PRICE,
-    HIGHEST_PRICE
+    kTimestamp,
+    kClosePrice,
+    kOpenPrice,
+    kVolume,
+    kLowestPrice,
+    kHighestPrice
 };
 
 struct ParsedData {
@@ -22,22 +22,26 @@ struct ParsedData {
     std::vector<double> highest_price;
 };
 
-struct ParseStruct { // maybe I don't need this struct. I can use search_key directly
+// maybe I don't need this struct. I can use search_key directly
+struct ParseStruct {
     std::string search_key;
     std::vector<std::string> parsed_data;
 };
 
 class DataParser {
 private:
-    size_t calculateReserve(int range, int interval);
-    std::map<DataName, ParseStruct> buildParseTable();
-    std::map<DataName, ParseStruct> extractStockData(ParsedData *parsedDataVector, const std::string& jsonData);
-    void reserveStructMemory(ParsedData *parsedDataVector, const int range, const int interval);
-    void convertDataType(ParsedData* stockData, const DataName dataName, const std::string& dataToken);
+    size_t CalculateReserve(int range, int interval);
+    std::map<DataName, ParseStruct> BuildParseTable();
+    std::map<DataName, ParseStruct> ExtractStockData(ParsedData *ParsedDataVector,
+                                                     const std::string& json_data);
+    void ReserveStructMemory(ParsedData *ParsedDataVector, const int range,
+                             const int interval);
+    void ConvertDataType(ParsedData* StockData, const DataName data_name,
+                         const std::string& data_token);
 public:
-    ParsedData parsedDataVector;
-    DataParser(const int range, const int interval, const std::string jsonData);
-    const ParsedData getParsedData();
+    ParsedData ParsedDataVector;
+    DataParser(const int range, const int interval, const std::string json_data);
+    const ParsedData GetParsedData();
 };
 
 #endif // DATA_PARSING_H_

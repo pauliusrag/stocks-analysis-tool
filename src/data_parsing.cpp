@@ -1,7 +1,8 @@
 #include "data_parsing.hpp"
 
 // Function to split a string by a delimiter
-std::vector<std::string> splitString(const std::string& str, const char delimiter) {
+std::vector<std::string> SplitString(const std::string& str,
+                                     const char delimiter) {
     std::vector<std::string> tokens;
     std::stringstream ss(str);
     std::string token;
@@ -11,38 +12,38 @@ std::vector<std::string> splitString(const std::string& str, const char delimite
     return tokens;
 }
 
-std::map<DataName, ParseStruct> DataParser::buildParseTable() {
+std::map<DataName, ParseStruct> DataParser::BuildParseTable() {
     std::map<DataName, ParseStruct> parse_table;
-    parse_table[DataName::TIMESTAMP].search_key = "\"timestamp\":[";
-    parse_table[DataName::CLOSE_PRICE].search_key = "\"close\":[";
-    parse_table[DataName::OPEN_PRICE].search_key = "\"open\":[";
-    parse_table[DataName::VOLUME].search_key = "\"volume\":[";
-    parse_table[DataName::LOWEST_PRICE].search_key = "\"low\":[";
-    parse_table[DataName::HIGHEST_PRICE].search_key = "\"high\":[";
+    parse_table[DataName::kTimestamp].search_key = "\"timestamp\":[";
+    parse_table[DataName::kClosePrice].search_key = "\"close\":[";
+    parse_table[DataName::kOpenPrice].search_key = "\"open\":[";
+    parse_table[DataName::kVolume].search_key = "\"volume\":[";
+    parse_table[DataName::kLowestPrice].search_key = "\"low\":[";
+    parse_table[DataName::kHighestPrice].search_key = "\"high\":[";
     return parse_table;
 }
 
-void DataParser::convertDataType(ParsedData* stockData,
-                                 const DataName dataName,
-                                 const std::string& dataToken) {
-    switch (dataName) {
-        case DataName::TIMESTAMP:
-            stockData->timestamp.push_back(std::stoi(dataToken));
+void DataParser::ConvertDataType(ParsedData* StockData,
+                                 const DataName data_name,
+                                 const std::string& data_token) {
+    switch (data_name) {
+        case DataName::kTimestamp:
+            StockData->timestamp.push_back(std::stoi(data_token));
             break;
-        case DataName::CLOSE_PRICE:
-            stockData->close_price.push_back(std::stod(dataToken));
+        case DataName::kClosePrice:
+            StockData->close_price.push_back(std::stod(data_token));
             break;
-        case DataName::OPEN_PRICE:
-            stockData->open_price.push_back(std::stod(dataToken));
+        case DataName::kOpenPrice:
+            StockData->open_price.push_back(std::stod(data_token));
             break;
-        case DataName::VOLUME:
-            stockData->volume.push_back(std::stoi(dataToken));
+        case DataName::kVolume:
+            StockData->volume.push_back(std::stoi(data_token));
             break;
-        case DataName::LOWEST_PRICE:
-            stockData->lowest_price.push_back(std::stod(dataToken));
+        case DataName::kLowestPrice:
+            StockData->lowest_price.push_back(std::stod(data_token));
             break;
-        case DataName::HIGHEST_PRICE:
-            stockData->highest_price.push_back(std::stod(dataToken));
+        case DataName::kHighestPrice:
+            StockData->highest_price.push_back(std::stod(data_token));
             break;
         default:
             std::cout << "Invalid data name" << std::endl;
@@ -50,33 +51,36 @@ void DataParser::convertDataType(ParsedData* stockData,
     }
 }
 
-std::map<DataName, ParseStruct> DataParser::extractStockData(ParsedData *parsedDataVector,
-                                                             const std::string &jsonData) {
-    std::map<DataName, ParseStruct> parse_table = buildParseTable();
+std::map<DataName, ParseStruct> DataParser::ExtractStockData(ParsedData *ParsedDataVector,
+                                                             const std::string &json_data) {
+    std::map<DataName, ParseStruct> parse_table = BuildParseTable();
 
     for (const auto& item : parse_table) {
         DataName data_name = item.first;
         std::string search_key = parse_table[data_name].search_key;
 
         // Find the starting and ending positions of the array
-        size_t dataStart = jsonData.find(search_key) + search_key.size();
-        size_t dataEnd = jsonData.find("]", dataStart);
+        size_t data_start = json_data.find(search_key) + search_key.size();
+        size_t data_end = json_data.find("]", data_start);
 
         // Extract the substring containing the data values
-        std::string extractedString = jsonData.substr(dataStart, dataEnd - dataStart);
+        std::string extracted_string = json_data.substr(data_start, data_end -
+                                                        data_start);
 
         // Split the substring by commas to get individual data values
-        std::vector<std::string> dataTokens = splitString(extractedString, ','); //maybe I can put data directly to splitString into my vector
+        //maybe I can put data directly to SplitString into my vector
+        std::vector<std::string> data_tokens = SplitString(extracted_string,
+                                                           ',');
         // Convert the string timestamps to integers and add them to the vector
-        for (const std::string& dataToken : dataTokens) {
-            parse_table[data_name].parsed_data.push_back(dataToken);
-            convertDataType(parsedDataVector, data_name, dataToken);
+        for (const std::string& data_token : data_tokens) {
+            parse_table[data_name].parsed_data.push_back(data_token);
+            ConvertDataType(ParsedDataVector, data_name, data_token);
         }
     }
     return parse_table;
 }
 
-size_t DataParser::calculateReserve(int range, int interval) {
+size_t DataParser::CalculateReserve(int range, int interval) {
     size_t calculated_reserve = 0;
     if (interval < range) {
         calculated_reserve = range / interval;
@@ -86,28 +90,24 @@ size_t DataParser::calculateReserve(int range, int interval) {
     return calculated_reserve;
 }
 
-uint32_t convertTimestamp(const std::string& timestampStr) {
-    uint32_t timestamp;
-    std::istringstream iss(timestampStr);
-    iss >> timestamp;
-    return timestamp;
+void DataParser::ReserveStructMemory(ParsedData *ParsedDataVector,
+                                     const int range,
+                                     const int interval) {
+    const size_t reserve_size = CalculateReserve(range, interval);
+    ParsedDataVector->timestamp.reserve(reserve_size);
+    ParsedDataVector->close_price.reserve(reserve_size);
+    ParsedDataVector->open_price.reserve(reserve_size);
+    ParsedDataVector->volume.reserve(reserve_size);
+    ParsedDataVector->lowest_price.reserve(reserve_size);
+    ParsedDataVector->highest_price.reserve(reserve_size);
 }
 
-void DataParser::reserveStructMemory(ParsedData *parsedDataVector, const int range, const int interval) {
-    const size_t reserve_size = calculateReserve(range, interval);
-    parsedDataVector->timestamp.reserve(reserve_size);
-    parsedDataVector->close_price.reserve(reserve_size);
-    parsedDataVector->open_price.reserve(reserve_size);
-    parsedDataVector->volume.reserve(reserve_size);
-    parsedDataVector->lowest_price.reserve(reserve_size);
-    parsedDataVector->highest_price.reserve(reserve_size);
+const ParsedData DataParser::GetParsedData() {
+    return ParsedDataVector;
 }
 
-const ParsedData DataParser::getParsedData() {
-    return parsedDataVector;
-}
-
-DataParser::DataParser(const int range, const int interval, const std::string jsonData) {
-    reserveStructMemory(&parsedDataVector, range, interval);
-    std::map<DataName, ParseStruct> stringStockData = extractStockData(&parsedDataVector, jsonData);
+DataParser::DataParser(const int range, const int interval,
+                       const std::string json_data) {
+    ReserveStructMemory(&ParsedDataVector, range, interval);
+    std::map<DataName, ParseStruct> stringStockData = ExtractStockData(&ParsedDataVector, json_data);
 }
