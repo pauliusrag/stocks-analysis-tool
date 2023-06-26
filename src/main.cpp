@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "data_fetching.hpp"
 
 #include "data_analysis.h"
 
@@ -73,4 +74,6 @@ int main() {
   data.Data_CalcPriceExponentialMovingAverage(close_vector, MaPeriodTable::k10dPeriod);
 
   return 0;
+    DataFetching teslaStock("TSLA", DataRange::kDays5, DataInterval::kDay1);
+    return 0;
 }

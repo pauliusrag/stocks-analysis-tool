@@ -1,0 +1,6 @@
+1) Add custom print functions
+2) Add print_debug file which would have custom print functions and would allow to enable debug prints
+3) Write unit tests for data_parsing and data_fetching
+4) Add and run clang on data_parsing and data_fetching
+5) Make sure to rename functions and variables to follow google coding style
+6) Convert functions to static where possible
