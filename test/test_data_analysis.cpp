@@ -35,7 +35,7 @@ TEST(DataAnalysis, CalculateSMADataSufficient_Test) {
   DataAnalysis data;
   std::vector<double> close_price_vector{110.00, 120.00, 130.00};
   bool sufficient_data =
-      data.Data_CalcPriceSimpleMovingAverage(close_price_vector, 2);
+      data.Data_CalcPriceSimpleMovingAverage(close_price_vector, MaPeriodTable::k2dPeriod);
   ASSERT_EQ(sufficient_data, 1);
 }
 
@@ -43,7 +43,7 @@ TEST(DataAnalysis, CalculateSMADataNotSufficient_Test) {
   DataAnalysis data;
   std::vector<double> close_price_vector{110.00, 120.00, 130.00};
   bool sufficient_data =
-      data.Data_CalcPriceSimpleMovingAverage(close_price_vector, 10);
+      data.Data_CalcPriceSimpleMovingAverage(close_price_vector, MaPeriodTable::k10dPeriod);
   ASSERT_EQ(sufficient_data, 0);
 }
 
@@ -53,7 +53,7 @@ TEST(DataAnalysis, CalculateSMAIndexCountOk_Test) {
                                          115.00, 122.00, 135.00, 134.00,
                                          138.00, 140.00};
   bool sufficient_data =
-      data.Data_CalcPriceSimpleMovingAverage(close_price_vector, 5);
+      data.Data_CalcPriceSimpleMovingAverage(close_price_vector, MaPeriodTable::k5dPeriod);
   ASSERT_EQ(sufficient_data, 1);
   int index_cnt = data.Data_GetSmaIndexCnt();
   ASSERT_EQ(index_cnt, 6);
@@ -65,7 +65,7 @@ TEST(DataAnalysis, CalculateSMAIndexOk_Test) {
                                          115.00, 122.00, 135.00, 134.00,
                                          138.00, 140.00};
   bool sufficient_data =
-      data.Data_CalcPriceSimpleMovingAverage(close_price_vector, 5);
+      data.Data_CalcPriceSimpleMovingAverage(close_price_vector, MaPeriodTable::k5dPeriod);
   ASSERT_EQ(sufficient_data, 1);
   ASSERT_DOUBLE_EQ(data.Data_GetSmaAtIndex(0), 116.0);
   ASSERT_DOUBLE_EQ(data.Data_GetSmaAtIndex(1), 118.4);

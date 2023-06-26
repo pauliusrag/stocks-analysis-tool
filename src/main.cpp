@@ -62,13 +62,15 @@ int main() {
   std::cout << "Stock profit during given period: " << percent << "%"
             << std::endl;
 
-  data.Data_CalcPriceSimpleMovingAverage(close_vector, SHORT_TERM_PERIOD);
+  data.Data_CalcPriceSimpleMovingAverage(close_vector, MaPeriodTable::k10dPeriod);
 
-  for (size_t i{0}; i < 12; i++) {
+  for (size_t i{0}; i < data.Data_GetSmaIndexCnt(); i++) {
     double value = data.Data_GetSmaAtIndex(i);
     std::cout << "SMA from Map: " << std::fixed << std::setprecision(5) << value
               << std::endl;
   }
+
+  data.Data_CalcPriceExponentialMovingAverage(close_vector, MaPeriodTable::k10dPeriod);
 
   return 0;
 }
