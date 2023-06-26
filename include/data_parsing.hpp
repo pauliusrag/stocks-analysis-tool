@@ -41,7 +41,7 @@ private:
 public:
     ParsedData ParsedDataVector;
     DataParser(const int range, const int interval, const std::string json_data);
-    const ParsedData GetParsedData();
+    const ParsedData& GetParsedData();
 };
 
 #endif // DATA_PARSING_H_

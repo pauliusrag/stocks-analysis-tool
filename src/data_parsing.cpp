@@ -1,17 +1,5 @@
 #include "data_parsing.hpp"
 
-// Function to split a string by a delimiter
-std::vector<std::string> SplitString(const std::string& str,
-                                     const char delimiter) {
-    std::vector<std::string> tokens;
-    std::stringstream ss(str);
-    std::string token;
-    while (std::getline(ss, token, delimiter)) {
-        tokens.push_back(token);
-    }
-    return tokens;
-}
-
 std::map<DataName, ParseStruct> DataParser::BuildParseTable() {
     std::map<DataName, ParseStruct> parse_table;
     parse_table[DataName::kTimestamp].search_key = "\"timestamp\":[";
@@ -66,15 +54,11 @@ std::map<DataName, ParseStruct> DataParser::ExtractStockData(ParsedData *ParsedD
         // Extract the substring containing the data values
         std::string extracted_string = json_data.substr(data_start, data_end -
                                                         data_start);
-
-        // Split the substring by commas to get individual data values
-        //maybe I can put data directly to SplitString into my vector
-        std::vector<std::string> data_tokens = SplitString(extracted_string,
-                                                           ',');
-        // Convert the string timestamps to integers and add them to the vector
-        for (const std::string& data_token : data_tokens) {
-            parse_table[data_name].parsed_data.push_back(data_token);
-            ConvertDataType(ParsedDataVector, data_name, data_token);
+        std::stringstream ss(extracted_string);
+        std::string token;
+        while (std::getline(ss, token, ',')) {
+            parse_table[data_name].parsed_data.push_back(token);
+            ConvertDataType(ParsedDataVector, data_name, token);
         }
     }
     return parse_table;
@@ -102,7 +86,7 @@ void DataParser::ReserveStructMemory(ParsedData *ParsedDataVector,
     ParsedDataVector->highest_price.reserve(reserve_size);
 }
 
-const ParsedData DataParser::GetParsedData() {
+const ParsedData& DataParser::GetParsedData() {
     return ParsedDataVector;
 }
 
@@ -110,4 +94,5 @@ DataParser::DataParser(const int range, const int interval,
                        const std::string json_data) {
     ReserveStructMemory(&ParsedDataVector, range, interval);
     std::map<DataName, ParseStruct> stringStockData = ExtractStockData(&ParsedDataVector, json_data);
+    std::cout<<"Parsed data size: "<<ParsedDataVector.highest_price[1]<<std::endl;
 }
