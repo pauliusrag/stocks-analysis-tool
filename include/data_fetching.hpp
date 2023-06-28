@@ -2,6 +2,7 @@
 #define DATA_FETCHING_H_
 
 #include <pch.h>
+#include "data_parsing.hpp"
 
 enum class DataRange {
     kDays1,
@@ -35,6 +36,7 @@ struct RequestData {
 
 class DataFetching {
 private:
+    ParsedData parsed_data;
     std::map<DataInterval, RequestData> BuildIntervalTable();
     std::map<DataRange, RequestData> BuildRangeTable();
     const std::string CreateHTTPSLink(std::string ticker,
@@ -45,6 +47,7 @@ private:
 public:
     DataFetching(const std::string ticker, const DataRange range,
                  const DataInterval interval);
+    const ParsedData& GetParsedData();
 };
 
 #endif // DATA_FETCHING_H_

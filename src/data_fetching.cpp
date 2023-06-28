@@ -1,5 +1,4 @@
 #include "data_fetching.hpp"
-#include "data_parsing.hpp"
 
 constexpr int8_t kDaysInMonth= 60; // sometimes it might be different
 constexpr int16_t kMinutesInDay = 1440;
@@ -83,6 +82,10 @@ const std::string DataFetching::SendYahooRequest(const std::string link) {
     return data;
 }
 
+const ParsedData& DataFetching::GetParsedData() {
+    return parsed_data;
+}
+
 DataFetching::DataFetching(const std::string ticker, const DataRange range,
                            const DataInterval interval) {
     std::map<DataInterval, RequestData> interval_table = BuildIntervalTable();
@@ -94,5 +97,5 @@ DataFetching::DataFetching(const std::string ticker, const DataRange range,
     // need to check if parsed string is ok
     DataParser parser(range_table[range].minutes,
                       interval_table[interval].minutes, parsed_string);
-    const ParsedData parsed_data = parser.GetParsedData();
+    parsed_data = parser.GetParsedData();
 }
