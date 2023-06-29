@@ -26,7 +26,7 @@ TEST_OBJS := $(patsubst $(TESTDIR)/%.cpp,$(BUILDDIR)/%.o,$(TEST_SRCS))
 
 # Include directories
 INC := -I$(INCDIR) -I$(CURL_INC_DIR)
-TEST_INC := -I$(GTESTDIR)/googletest/include -I$(GTESTDIR)/googlemock/include -I$(INCDIR)
+TEST_INC := -I$(GTESTDIR)/googletest/include -I$(GTESTDIR)/googlemock/include -I$(INCDIR) -I$(CURL_INC_DIR)
 
 # Libraries
 TEST_LIBS := -L$(GTESTDIR)/build/lib -lgtest -lgtest_main -lgmock_main -lgmock -lpthread
@@ -42,7 +42,7 @@ $(EXEC): $(OBJS)
 
 # Target: Build test executable
 $(TEST_EXEC): $(TEST_OBJS)
-	$(CXX) $(CXXFLAGS) $(TEST_INC) -o $(TEST_EXEC) $(TEST_OBJS) $(TEST_LIBS)
+	$(CXX) $(CXXFLAGS) $(TEST_INC) $(CURL_LDFLAGS) -o $(TEST_EXEC) $(TEST_OBJS) $(TEST_LIBS) $(CURL_LDLIBS)
 
 # Rule: Build object files from source files
 $(BUILDDIR)/%.o: $(SRCDIR)/%.cpp | $(BUILDDIR)
