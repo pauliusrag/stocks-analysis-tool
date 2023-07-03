@@ -7,13 +7,22 @@ DataAnalysis::DataAnalysis()
 /* Methods */
 /* Getters */
 double DataAnalysis::Data_GetStockProfit(void) { return profit; }
+
 double DataAnalysis::Data_GetSmaAtIndex(size_t index) {
   if ((sma_struct.sma_cnt - 1 < index) || (sma_struct.sma_cnt == 0)) {
     return 0.0;
   }
   return sma_struct.sma_data.at(index);
 }
+double DataAnalysis::Data_GetEmaAtIndex(size_t index) {
+  if ((ema_struct.ema_cnt - 1 < index) || (ema_struct.ema_cnt == 0)) {
+    return 0.0;
+  }
+  return ema_struct.ema_data.at(index);
+}
+
 size_t DataAnalysis::Data_GetSmaIndexCnt(void) { return sma_struct.sma_cnt; }
+size_t DataAnalysis::Data_GetEmaIndexCnt(void) { return sma_struct.sma_cnt; }
 
 bool DataAnalysis::Data_CalcStockProfit(std::vector<double> open_price,
                                         std::vector<double> close_price) {
@@ -65,12 +74,10 @@ bool DataAnalysis::Data_CalcPriceSimpleMovingAverage(
     sma_struct.sma_cnt++;
   }
 
-  Data_WriteToFileDouble(sma_struct.sma_data);
-
   return true;
 }
 
-bool DataAnalysis::Data_CalcPriceExponentialMovingAverage(
+void DataAnalysis::Data_CalcPriceExponentialMovingAverage(
   const std::vector<double> &close_price, const MaPeriodTable period) {
 
     const size_t period_value = static_cast<size_t>(period);
@@ -83,6 +90,6 @@ bool DataAnalysis::Data_CalcPriceExponentialMovingAverage(
     for (size_t i{1}; i < close_price.size(); i++) {
       double curr_ema = ((1 - smoothing) * ema_struct.ema_data.at(i - 1)) + (smoothing * close_price.at(i));
       ema_struct.ema_data.push_back(curr_ema);
-      std::cout<<"EMA: "<<ema_struct.ema_data.at(i)<<std::endl;
+      ema_struct.ema_cnt++;
     }
 }

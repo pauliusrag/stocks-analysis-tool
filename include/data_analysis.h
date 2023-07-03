@@ -34,11 +34,13 @@ class DataAnalysis {
                             std::vector<double> close_price);
   bool Data_CalcPriceSimpleMovingAverage(const std::vector<double> &close_price,
                                          const MaPeriodTable period);
-  bool Data_CalcPriceExponentialMovingAverage(
+  void Data_CalcPriceExponentialMovingAverage(
       const std::vector<double> &close_price, const MaPeriodTable period);
   double Data_GetStockProfit(void);
   double Data_GetSmaAtIndex(size_t index);
   size_t Data_GetSmaIndexCnt(void);
+  double Data_GetEmaAtIndex(size_t index);
+  size_t Data_GetEmaIndexCnt(void);
 
   /* Constructors */
   DataAnalysis();

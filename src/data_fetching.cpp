@@ -51,7 +51,6 @@ const std::string DataFetching::CreateHTTPSLink(std::string ticker,
     const std::string url_beginning = "https://query1.finance.yahoo.com/v8/finance/chart/";
     const std::string link = url_beginning + ticker + "?interval=" + interval +
                              "&range=" + range;
-    std::cout << link << std::endl;
     return link;
 }
 
@@ -77,8 +76,7 @@ const std::string DataFetching::SendYahooRequest(const std::string link) {
         }
         curl_easy_cleanup(curl);
     }
-    // Display the fetched data
-    std::cout << "Fetched data:\n" << data << std::endl;
+
     return data;
 }
 
